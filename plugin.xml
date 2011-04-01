@@ -2,7 +2,7 @@
   <nom>Skins</nom>
   <auteur>Collectif spip-dev</auteur>
   <licence>(c) 2009 GPL</licence>
-  <version>1.0</version>
+  <version>1.0.0</version>
   <etat>dev</etat>
   <description>Des themes pour l'espace priv&eacute;</description>
   <prefix>themes</prefix>
