@@ -1,5 +1,6 @@
 * text=auto !eol
 /plugin.xml -text
+prive/squelettes/contenu/produire_icones.html -text
 prive/themes/basic/images/accueil-48.png -text
 prive/themes/basic/images/activite-48.png -text
 prive/themes/basic/images/add-16.png -text

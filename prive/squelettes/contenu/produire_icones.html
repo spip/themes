@@ -1,0 +1,49 @@
+[(#REM|sinon_interdire_acces)]
+[(#REM)
+
+	Copier les icones d'un chemin vers un autre en les modifiant
+]
+#SET{dest,#CHEMIN{extensions/themes/prive/themes/cowsepia/images}}
+<BOUCLE_taille(DATA){source tableau,#LISTE{48,32,24,16}}{si 0}>
+	<BOUCLE_icones(DATA){source glob,#CHEMIN{extensions/themes/prive/themes/cow/images}|concat{'/*-',#VALEUR,'.png'}}>
+	[(#VALEUR|balise_img|image_sepia)]
+	[(VALEUR|balise_img|image_sepia|extraire_attribut{src}|copy{#GET{dest}|concat{/#VALEUR|basename}})]
+	</BOUCLE_icones>
+	<hr />
+</BOUCLE_taille>
+
+[(#REM)
+
+	Combiner les icones avec les add/del/new/
+]
+#SET{source,#CHEMIN{extensions/themes/prive/themes/cowmix/images}}
+<BOUCLE_tailles(DATA){source tableau,#LISTE{32,24,16}}{si 0}>
+	<BOUCLE_fonction(DATA){source tableau,#LISTE{add,del,new}}>
+		[(#SET{f,[(#CHEMIN{[(#GET{source})/[(#_fonction:VALEUR)]-[(#_tailles:VALEUR)].png]})]})]
+		<BOUCLE_iconesc(DATA){source glob,#GET{source}|concat{'/*-',#_tailles:VALEUR,'.png'}}>
+		[(#SET{nom,[(#VALEUR|basename{[-(#_tailles:VALEUR).png]}|concat{'-',#_fonction:VALEUR,'-',#_tailles:VALEUR,'.png'})]})]
+		[(#CHEMIN{extensions/themes/prive/themes/cowsepia/images/#GET{nom}}|oui)
+			[(#VALEUR|balise_img|image_masque{#GET{f},mode=normal})]
+			[(#VALEUR|balise_img|image_masque{#GET{f},mode=normal}|extraire_attribut{src}|copy{#GET{source}|concat{'/',#GET{nom}}})]
+		]
+		</BOUCLE_iconesc>
+	</BOUCLE_fonction>
+	<hr />
+</BOUCLE_tailles>
+
+[(#REM)
+
+	Mixer les icones sepia avec les icones couleur
+]
+#SET{coul,#CHEMIN{extensions/themes/fatcow/32x32}}
+#SET{dest,#CHEMIN{extensions/themes/fatcow-retro/32x32}}
+<BOUCLE_iconesm(DATA){source glob,#GET{coul}|concat{'/*.png'}}{si 0}>
+#SET{img,#VALEUR|image_sepia
+			|image_masque{#VALEUR|image_alpha{90},mode=normal}}
+[(#GET{img})]
+#SET{n,#GET{dest}|concat{/#VALEUR|basename}}
+[(#GET{n}|file_exists|non)
+[(#GET{img}
+			|extraire_attribut{src}|copy{#GET{n}}|vide
+)]
+</BOUCLE_iconesm>
