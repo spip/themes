@@ -1,13 +1,4 @@
-[(#REM)
-
-	Planche Contact
-
-]
-<BOUCLE_contact(DATA){source glob,#CHEMIN{extensions/themes/fatcow-retro/32x32}|concat{'/*.png'}}>
-[(#VALEUR|balise_img)]
-</BOUCLE_contact>
-
-
+[(#REM|sinon_interdire_acces)]
 [(#REM)
 
 	Copier les icones d'un chemin vers un autre en les modifiant
