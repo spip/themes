@@ -1,4 +1,7 @@
 * text=auto !eol
+images/themes-128.png -text
+images/themes-24.png -text
+images/themes-32.png -text
 /plugin.xml -text
 prive/squelettes/contenu/produire_icones.html -text
 prive/themes/basic/images/accueil-48.png -text
