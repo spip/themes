@@ -1,6 +1,7 @@
 <plugin>
   <nom>Skins</nom>
   <auteur>Collectif spip-dev</auteur>
+  <icon>images/themes-32.png</icon>
   <licence>(c) 2009 GPL</licence>
   <version>1.0.0</version>
   <etat>dev</etat>
