@@ -206,7 +206,7 @@ prive/themes/basic/images/traduction-new-24.png -text
 prive/themes/basic/images/warning-16.png -text
 prive/themes/basic/images/warning-24.png -text
 prive/themes/basic/images/warning-48.png -text
-prive/themes/basic/style_prive_theme.html -text
+prive/themes/basic/theme.css.html -text
 prive/themes/cow/images/accueil-48.png -text
 prive/themes/cow/images/activite-48.png -text
 prive/themes/cow/images/add-16.png -text
@@ -413,7 +413,7 @@ prive/themes/cow/images/zoomin-32.png -text
 prive/themes/cow/images/zoomout-16.png -text
 prive/themes/cow/images/zoomout-24.png -text
 prive/themes/cow/images/zoomout-32.png -text
-prive/themes/cow/style_prive_theme.html -text
+prive/themes/cow/theme.css.html -text
 prive/themes/cowmix/images/accueil-48.png -text
 prive/themes/cowmix/images/activite-48.png -text
 prive/themes/cowmix/images/add-16.png -text
@@ -900,7 +900,7 @@ prive/themes/cowmix/images/zoomin-32.png -text
 prive/themes/cowmix/images/zoomout-16.png -text
 prive/themes/cowmix/images/zoomout-24.png -text
 prive/themes/cowmix/images/zoomout-32.png -text
-prive/themes/cowmix/style_prive_theme.html -text
+prive/themes/cowmix/theme.css.html -text
 prive/themes/cowsepia/images/accueil-48.png -text
 prive/themes/cowsepia/images/activite-48.png -text
 prive/themes/cowsepia/images/add-16.png -text
@@ -1358,4 +1358,4 @@ prive/themes/cowsepia/images/zoomin-32.png -text
 prive/themes/cowsepia/images/zoomout-16.png -text
 prive/themes/cowsepia/images/zoomout-24.png -text
 prive/themes/cowsepia/images/zoomout-32.png -text
-prive/themes/cowsepia/style_prive_theme.html -text
+prive/themes/cowsepia/theme.css.html -text
