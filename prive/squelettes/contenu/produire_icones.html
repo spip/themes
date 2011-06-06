@@ -1,4 +1,3 @@
-[(#REM|sinon_interdire_acces)]
 [(#REM)
 
 	Copier les icones d'un chemin vers un autre en les modifiant
@@ -17,10 +16,10 @@
 	Combiner les icones avec les add/del/new/
 ]
 #SET{source,#CHEMIN{extensions/themes/prive/themes/cowmix/images}}
-<BOUCLE_tailles(DATA){source tableau,#LISTE{32,24,16}}{si 0}>
+<BOUCLE_tailles(DATA){source tableau,#LISTE{32,24,16}}{si 1}>
 	<BOUCLE_fonction(DATA){source tableau,#LISTE{add,del,new}}>
 		[(#SET{f,[(#CHEMIN{[(#GET{source})/[(#_fonction:VALEUR)]-[(#_tailles:VALEUR)].png]})]})]
-		<BOUCLE_iconesc(DATA){source glob,#GET{source}|concat{'/*-',#_tailles:VALEUR,'.png'}}>
+		<BOUCLE_iconesc(DATA){source glob,#GET{source}|concat{'/auteur*comite-',#_tailles:VALEUR,'.png'}}>
 		[(#SET{nom,[(#VALEUR|basename{[-(#_tailles:VALEUR).png]}|concat{'-',#_fonction:VALEUR,'-',#_tailles:VALEUR,'.png'})]})]
 		[(#CHEMIN{extensions/themes/prive/themes/cowsepia/images/#GET{nom}}|oui)
 			[(#VALEUR|balise_img|image_masque{#GET{f},mode=normal})]
