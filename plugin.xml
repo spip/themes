@@ -10,5 +10,5 @@
 	<description>Des th&egrave;mes pour l'espace priv&eacute;</description>
 	<prefix>themes</prefix>
 	<categorie>outil</categorie>
-	<necessite id="SPIP" version="[2.1.0 dev;)" />
+	<necessite id="SPIP" version="[2.1.0-dev;)" />
 </plugin>
