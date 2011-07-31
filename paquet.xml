@@ -1,9 +1,9 @@
 <paquet
 	prefix="themes"
 	categorie="outil"
-	version="1.0.0"
+	version="1.1.0"
 	etat="dev"
-	compatibilite="[2.1.0-dev;["
+	compatibilite="[3.0.0-alpha2;["
 	logo="images/themes-32.png"
 >	
 
@@ -11,7 +11,6 @@
 	<!-- Des thèmes pour l'espace privé -->
 
 	<auteur>Collectif SPIP</auteur>
-	<credit lien="http://schollidesign.deviantart.com/art/Human-O2-Iconset-105344123">schollidesign pour l'icone</credit>
 
 	<copyright>2009</copyright>
 
