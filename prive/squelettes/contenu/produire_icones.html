@@ -6,7 +6,7 @@
 <BOUCLE_taille(DATA){source tableau,#LISTE{48,32,24,16}}{si 0}>
 	<BOUCLE_icones(DATA){source glob,#CHEMIN{extensions/themes/prive/themes/cow/images}|concat{'/*-',#VALEUR,'.png'}}>
 	[(#VALEUR|balise_img|image_sepia)]
-	[(VALEUR|balise_img|image_sepia|extraire_attribut{src}|copy{#GET{dest}|concat{/#VALEUR|basename}})]
+	[(#VALEUR|balise_img|image_sepia|extraire_attribut{src}|copy{#GET{dest}|concat{/#VALEUR|basename}})]
 	</BOUCLE_icones>
 	<hr />
 </BOUCLE_taille>
