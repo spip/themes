@@ -1,6 +1,8 @@
 * text=auto !eol
 images/themes-32.png -text
 lang/paquet-themes.xml -text
+lang/paquet-themes_en.php -text
+lang/paquet-themes_sk.php -text
 prive/squelettes/contenu/produire_icones.html -text
 prive/themes/basic/images/accueil-48.png -text
 prive/themes/basic/images/activite-48.png -text
