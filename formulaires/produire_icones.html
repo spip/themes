@@ -1,0 +1,85 @@
+<div class="formulaire_spip formulaire_configurer formulaire_#FORM">
+
+<h3 class="titrem"><:themes:titre_produire_icones:></h3>
+
+[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+[<p class="notice">(#ENV*{message_info})</p>]
+
+<form method="post" action="#ENV{action}">
+<div>
+#ACTION_FORMULAIRE{#ENV{action}}
+
+<ul>
+	#SET{name,repertoire_racine}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}#SET{obli,obligatoire}
+	<li class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
+		<label for="#GET{name}"><:themes:label_repertoire_racine:></label>
+		<div class="explication"><:themes:explication_repertoire_racine:></div>
+		[<span class='erreur_message'>(#GET{erreurs})</span>]
+		<select name="#GET{name}" id="#GET{name}">
+			<option></option>
+			<BOUCLE_liste_repertoires(DATA){source tableau,#ENV{liste_repertoires}}>
+				<option value='#VALEUR'[(#VALEUR|=={#ENV{#GET{name}}}|oui) selected='selected']>#CLE</option>
+			</BOUCLE_liste_repertoires>
+		</select>
+	</li>
+
+	<BOUCLE_si_repertoire(CONDITION){si #ENV{repertoire_racine}}>
+	#SET{name,images}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}#SET{obli,''}
+	<li class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
+		<label for="#GET{name}"><:themes:label_images:></label>
+		<div class="explication"><:themes:explication_images:></div>
+		[<span class='erreur_message'>(#GET{erreurs})</span>]
+		<BOUCLE_liste_images(DATA){source tableau,#ENV{liste_images}}>
+		<div class='choix'>
+			<input type="checkbox" name="#GET{name}[]" id="#GET{name}_#COMPTEUR_BOUCLE" value="#CLE"[(#CLE|in_any{#ENV{images}}|oui) checked='checked'] />
+			<label for="#GET{name}_#COMPTEUR_BOUCLE">[(#ENV{repertoire_racine}|concat{/#CLE}|image_reduire{50}|inserer_attribut{style,vertical-align:middle;margin:.3em 0;}) ]#CLE</label>
+		</div>
+		</BOUCLE_liste_images>
+	</li>
+	<input type='hidden' name='repertoire_racine_old' value='#ENV{repertoire_racine}' />
+	</BOUCLE_si_repertoire>
+</ul>
+
+<p class='boutons'><input type='submit' class='submit' value='[(#ENV{repertoire_racine}|?{<:themes:bouton_produire_icones:>,<:bouton_suivant:>})]' /></p>
+</div>
+</form>
+
+
+<BOUCLE_si_repertoire_et_images(CONDITION){si (#ENV{repertoire_racine}
+		|et{#ENV{repertoire_racine}|=={#ENV{repertoire_racine_old}}}
+		|et{#ENV{images}})}>
+	<B_chaque_image>
+	<h2 class='h2'>Images produites : </h2>
+	<table>
+	<BOUCLE_chaque_image(DATA){source tableau,#ENV{images}}>
+		[(#SET{image_source,[(#ENV{repertoire_racine})/#VALEUR]})]
+
+		#SET{taille,#VALEUR|themes_extraire_image{taille}}
+		#SET{image,#VALEUR|themes_extraire_image{nom}}
+		#SET{extension,#VALEUR|themes_extraire_image{extension}}
+		
+		<tr>
+			<th>[(#GET{image_source}|balise_img{#VALEUR}|inserer_attribut{title,#VALEUR})]</th>
+			<td>
+
+			<BOUCLE_fonction(DATA){source tableau,#LISTE{add,del,new,edit}}{si #GET{taille}}>
+				[(#SET{f,[(#CHEMIN{[prive/themes/spip/images/(#VALEUR)[-(#GET{taille})].png]})]})]
+
+				[(#SET{destination,[(#GET{image})[-(#VALEUR)][-(#GET{taille})][.(#GET{extension})]]})]
+
+				[(#GET{image_source}|balise_img|image_masque{#GET{f},mode=normal}
+					|inserer_attribut{title,#GET{destination}})]
+				[(#GET{image_source}|balise_img|image_masque{#GET{f},mode=normal}
+					|extraire_attribut{src}|copy{#ENV{repertoire_destination}|concat{'/',#GET{destination}}}|oui)]
+
+			</BOUCLE_fonction>
+			</td>
+		</tr>
+	</BOUCLE_chaque_image>
+	</table>
+	</B_chaque_image>
+</BOUCLE_si_repertoire_et_images>
+
+
+</div>

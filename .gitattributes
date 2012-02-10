@@ -1,4 +1,6 @@
 * text=auto !eol
+formulaires/produire_icones.html -text
+formulaires/produire_icones.php -text
 images/themes-32.png -text
 lang/paquet-themes.xml -text
 lang/paquet-themes_en.php -text
