@@ -20,6 +20,7 @@ function formulaires_produire_icones_charger_dist() {
 
 	$images = array();
 	$repertoire_destination = '';
+	$erreur='';
 
 	// on recupere toutes les images du repertoire demandé.
 	// et on verifie que le répertoire est écrivable
