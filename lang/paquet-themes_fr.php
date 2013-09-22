@@ -6,8 +6,8 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
-	'themes_description' => 'Des thèmes pour l\'espace privé',
-	'themes_slogan' => 'Des thèmes pour l\'espace privé'
+	'themes_description' => 'Des thèmes pour l’espace privé',
+	'themes_slogan' => 'Des thèmes pour l’espace privé'
 );
 
 ?>
