@@ -20,7 +20,7 @@ function formulaires_produire_icones_charger_dist() {
 
 	$images = array();
 	$repertoire_destination = '';
-	$erreur='';
+	$erreur = '';
 
 	// on recupere toutes les images du repertoire demandé.
 	// et on verifie que le répertoire est écrivable
@@ -67,7 +67,7 @@ function formulaires_produire_icones_verifier_dist() {
 	$erreurs = array();
 	$source = _request('repertoire_racine');
 	$images = _request('images');
-	if (!$source OR (_request('repertoire_racine_old')==$source AND (!$images OR !count($images)))) {
+	if (!$source or (_request('repertoire_racine_old') == $source and (!$images or !count($images)))) {
 		$erreurs['message_erreur'] = 'Votre saisie contient des oublis !';
 	}
 	return $erreurs;
@@ -140,7 +140,7 @@ function find_dirs_in_path($chercher) {
  * @return mixed
  * 		Information demandee, sinon toutes les informations calculées.
 **/
-function themes_extraire_image($nom_image, $type='') {
+function themes_extraire_image($nom_image, $type = '') {
 	$infos = array();
 	
 	$n = pathinfo($nom_image);
@@ -227,6 +227,4 @@ ANCIEN CODE POUR MEMOIRE
 )]
 </BOUCLE_iconesm>
 
-*/
-
-?>
+*/;
