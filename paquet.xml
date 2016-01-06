@@ -1,9 +1,9 @@
 <paquet
 	prefix="themes"
 	categorie="outil"
-	version="1.2.0"
+	version="1.2.1"
 	etat="stable"
-	compatibilite="[3.0.0;3.1.*]"
+	compatibilite="[3.1.0;3.1.*]"
 	logo="images/themes-32.png"
 >	
 
