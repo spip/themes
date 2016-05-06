@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'themes_slogan' => 'Farebné motívy pre súkromnú zónu'
 );
 
-?>

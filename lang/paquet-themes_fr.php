@@ -12,4 +12,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'themes_slogan' => 'Des thèmes pour l’espace privé'
 );
 
-?>

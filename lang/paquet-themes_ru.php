@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'themes_slogan' => 'Темы оформления административной части'
 );
 
-?>
