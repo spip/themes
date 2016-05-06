@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'themes_description' => 'تم‌هاي قسمت شخصي',
 	'themes_slogan' => 'تم‌هاي قسمت شخصي'
 );
-

@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'themes_description' => 'Themes for the backoffice',
 	'themes_slogan' => 'Themes for the backoffice'
 );
-

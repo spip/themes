@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'themes_description' => 'Temi per l’area privata',
 	'themes_slogan' => 'Temi per l’area privata'
 );
-
