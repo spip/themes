@@ -8,7 +8,7 @@
 
 <form method="post" action="#ENV{action}">
 <div>
-#ACTION_FORMULAIRE{#ENV{action}}
+#ACTION_FORMULAIRE
 
 <ul>
 	#SET{name,repertoire_racine}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}#SET{obli,obligatoire}
