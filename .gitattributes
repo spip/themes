@@ -13,6 +13,7 @@ lang/paquet-themes_pt_br.php -text
 lang/paquet-themes_ru.php -text
 lang/paquet-themes_sk.php -text
 lang/themes.xml -text
+lang/themes_es.php -text
 prive/squelettes/contenu/produire_icones.html -text
 prive/themes/basic/images/accueil-48.png -text
 prive/themes/basic/images/activite-48.png -text
