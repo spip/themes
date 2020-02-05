@@ -1,9 +1,9 @@
 <traduction
 	module="themes"
-	id="themes--themes-2ffff"
+	id="themes--themes-57c98"
 	gestionnaire="salvatore"
 	url="https://trad.spip.net"
-	source="svn://zone.spip.org/spip-zone/_core_/plugins/themes/lang"
+	source="https://git.spip.net/spip/themes.git"
 	reference="fr">
 	<langue code="es" url="https://trad.spip.net/tradlang_module/themes?lang_cible=es" total="7" traduits="6" relire="1" modifs="0" nouveaux="0" pourcent="85.71">
 		<traducteur nom="danielquisbert" lien="https://trad.spip.net/auteur/danielquisbert" />
